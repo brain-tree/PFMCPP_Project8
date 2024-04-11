@@ -46,7 +46,7 @@ void Highway::removeVehicleInternal(Vehicle* v)
     do not call `setSpeed`.  Pick a different function.
     trucks pull over, but cars and bikes try to evade!!
     */
-/*
+
     if(auto* car = dynamic_cast<Car*>(v))
     {
         car->tryToEvade();
@@ -60,7 +60,7 @@ void Highway::removeVehicleInternal(Vehicle* v)
         semitruck->pullOver();
     }
 }
-*/
+
 void Highway::addVehicle(Vehicle* v)
 {
     vehicles.push_back(v);
