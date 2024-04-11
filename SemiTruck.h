@@ -1,8 +1,14 @@
 #pragma once
 
-struct SemiTruck
+#include "Vehicle.h"
+
+struct SemiTruck : public Vehicle
 {
-    SemiTruck();
+    SemiTruck(const std::string& n);
+
+    ~SemiTruck() override;
+    SemiTruck(const SemiTruck&);
+    SemiTruck& operator = (const SemiTruck&);
 
     void getUpToSpeed();
     void pullOver();
