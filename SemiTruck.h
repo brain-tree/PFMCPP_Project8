@@ -2,5 +2,7 @@
 
 struct SemiTruck
 {
+    SemiTruck();
 
+    void getUpToSpeed();
 };
