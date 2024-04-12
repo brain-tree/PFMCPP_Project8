@@ -1,6 +1,5 @@
 #include "HighwayPatrol.h"
 #include <iostream>
-#include <cassert>
 #include "Car.h"
 #include "Motorcycle.h"
 #include "SemiTruck.h"
