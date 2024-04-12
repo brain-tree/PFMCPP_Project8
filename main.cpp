@@ -61,7 +61,6 @@ your task:
 #include "HighwayPatrol.h"
 #include "Motorcycle.h"
 #include "SemiTruck.h"
-#include "Vehicle.h"
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -127,17 +126,38 @@ int main()
     /*
      construct 2 more Car instances via emplace_back.
      */
-    
+    cars.emplace_back("john");
+    cars.emplace_back("james");
     /*
      now reserve and emplace_back your Trucks and Motorcyles
      */
+    motorcycles.reserve(2);
+    trucks.reserve(2);
+
+    motorcycles.emplace_back("paul");
+    motorcycles.emplace_back("matthew");    
+
+    trucks.emplace_back("luke");
+    trucks.emplace_back("thomas");
     
-    
-    
-    
-    assert(false);
+    //assert(false);
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }
     //be careful to not accidentally make element copies when iterating.
+    for( auto& car : cars ) 
+    {
+        highway.addVehicle(&car);
+    }
+
+    for( auto& motorcycle : motorcycles ) 
+    {
+        highway.addVehicle(&motorcycle);
+    }
+
+    //  8) Add some SemiTrucks to the highway.
+    for( auto& semitruck : trucks ) 
+    {
+        highway.addVehicle(&semitruck);
+    }
     
     HighwayPatrol cop;
     cop.scanHighway(&highway);
